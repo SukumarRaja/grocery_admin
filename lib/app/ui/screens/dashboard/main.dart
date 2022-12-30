@@ -48,7 +48,7 @@ class MainDashboard extends StatelessWidget {
               icon: Icons.dashboard,
               route: AppRoutes.dashboard),
           AdminMenuItem(
-              title: "Vendors", icon: Icons.person_3, route: AppRoutes.vendors),
+              title: "Vendors", icon: Icons.person, route: AppRoutes.vendors),
           AdminMenuItem(
               title: "Withdrawal",
               icon: Icons.money_rounded,

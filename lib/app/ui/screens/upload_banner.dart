@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../../controllers/banner.dart';
 import '../themes/colors.dart';
 import '../themes/font_size.dart';
+import '../widgets/banner_image_card.dart';
 import '../widgets/common_text.dart';
 
 class UploadBanners extends StatelessWidget {
@@ -80,7 +82,20 @@ class UploadBanners extends StatelessWidget {
                     fontColor: AppColors.white,
                   ))
             ],
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Divider(color: AppColors.grey),
+          ),
+          Container(
+            alignment: Alignment.topLeft,
+            padding: EdgeInsets.all(8.0),
+            child: CommonText(
+              text: "Banners",
+              fontSize: AppFontSize.eight,
+            ),
+          ),
+          BannerImageCard()
         ],
       ),
     );
