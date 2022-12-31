@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_admin/app/ui/themes/font_size.dart';
-
-import '../../themes/colors.dart';
+import '../../themes/font_size.dart';
 import '../../widgets/common_text.dart';
+import '../../widgets/main_title_for_pages.dart';
 
 class Products extends StatelessWidget {
   const Products({Key? key}) : super(key: key);
@@ -33,21 +32,5 @@ class Products extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Expanded buildExpanded({required name, required flex}) {
-    return Expanded(
-        flex: flex,
-        child: Container(
-          decoration: BoxDecoration(
-              border: Border.all(color: AppColors.grey.withOpacity(.2)),
-              color: AppColors.primary),
-          child: CommonText(
-            text: name,
-            fontSize: AppFontSize.four,
-            fontColor: AppColors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ));
   }
 }

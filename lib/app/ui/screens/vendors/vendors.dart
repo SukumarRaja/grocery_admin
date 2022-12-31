@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../themes/colors.dart';
 import '../../themes/font_size.dart';
 import '../../widgets/common_text.dart';
+import '../../widgets/main_title_for_pages.dart';
 
 class Vendors extends StatelessWidget {
   const Vendors({Key? key}) : super(key: key);
@@ -33,21 +34,5 @@ class Vendors extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  Expanded buildExpanded({required name, required flex}) {
-    return Expanded(
-        flex: flex,
-        child: Container(
-          decoration: BoxDecoration(
-              border: Border.all(color: AppColors.grey.withOpacity(.2)),
-              color: AppColors.primary),
-          child: CommonText(
-            text: name,
-            fontSize: AppFontSize.four,
-            fontColor: AppColors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ));
   }
 }
