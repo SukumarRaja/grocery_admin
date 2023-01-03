@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../themes/font_size.dart';
-import '../../widgets/common_text.dart';
+import '../../../controllers/main.dart';
+import '../../widgets/dashbooard_card.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -8,13 +8,32 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        alignment: Alignment.topLeft,
-        padding: EdgeInsets.all(10.0),
-        child: CommonText(
-          text: "Manage Dashboard",
-          fontSize: AppFontSize.eight,
-        ),
+      child: Column(
+        children: [
+          SizedBox(height: 25),
+          Container(
+            height: 150,
+            child: ListView.builder(
+                itemCount: 5,
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, int index) {
+                  return DashboardCard(
+                    title: "Vendors",
+                    titleCount: "50",
+                    icon: Icons.group,
+                    since: "month",
+                    percentage: "3.48",
+                    onPressed: () {
+                      if (index == 0) {
+                        print("first");
+                        MainController.to.selectPageIndex = 1;
+                      }
+                    },
+                  );
+                }),
+          )
+        ],
       ),
     );
   }

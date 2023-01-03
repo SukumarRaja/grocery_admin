@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:get/get.dart';
+import '../../../config/config.dart';
 import '../../../controllers/main.dart';
 import '../../../routes/app_routes.dart';
 import '../../themes/colors.dart';
@@ -40,6 +41,31 @@ class MainDashboard extends StatelessWidget {
           fontSize: AppFontSize.six,
           fontColor: AppColors.white,
         ),
+        actions: [
+          Container(
+            height: 40,
+            width: 40,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.red,
+              boxShadow: [
+                BoxShadow(
+                    color: AppColors.grey.withOpacity(.5),
+                    spreadRadius: 1,
+                    blurRadius: 2)
+              ],
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(AppConfig.profile),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Icon(Icons.notifications),
+          Icon(Icons.more_vert),
+        ],
       ),
       sideBar: SideBar(
         items: [
