@@ -19,7 +19,15 @@ class Dashboard extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, int index) {
                   return DashboardCard(
-                    title: "Vendors",
+                    title: index == 0
+                        ? "Vendors"
+                        : index == 1
+                            ? "Orders"
+                            : index == 2
+                                ? "Customers"
+                                : index == 3
+                                    ? "Products"
+                                    : "Delivery Man",
                     titleCount: "50",
                     icon: Icons.group,
                     since: "month",

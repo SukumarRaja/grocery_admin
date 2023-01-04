@@ -10,6 +10,8 @@ import '../../themes/colors.dart';
 import '../../themes/font_size.dart';
 import '../../widgets/common_text.dart';
 import '../categories/categories.dart';
+import '../customer/customers.dart';
+import '../deliveryBoy/delivery_boy.dart';
 import '../orders/orders.dart';
 import '../products/products.dart';
 import '../upload_banner.dart';
@@ -25,6 +27,8 @@ class MainDashboard extends StatelessWidget {
     Vendors(),
     Withdrawal(),
     Orders(),
+    Customers(),
+    DeliveryBoys(),
     Categories(),
     Products(),
     UploadBanners()
@@ -68,6 +72,8 @@ class MainDashboard extends StatelessWidget {
         ],
       ),
       sideBar: SideBar(
+        activeIconColor: Colors.red,
+        textStyle: TextStyle(color: AppColors.primary,fontFamily: "Oswald"),
         items: [
           AdminMenuItem(
               title: "Dashboard",
@@ -83,6 +89,14 @@ class MainDashboard extends StatelessWidget {
               title: "Orders",
               icon: Icons.shopping_cart,
               route: AppRoutes.orders),
+          AdminMenuItem(
+              title: "Customers",
+              icon: Icons.person,
+              route: AppRoutes.customers),
+          AdminMenuItem(
+              title: "Delivery Man",
+              icon: Icons.delivery_dining,
+              route: AppRoutes.deliveryBoys),
           AdminMenuItem(
               title: "Categories",
               icon: Icons.category,
@@ -104,12 +118,16 @@ class MainDashboard extends StatelessWidget {
             MainController.to.selectPageIndex = 2;
           } else if (data.route == "/Orders") {
             MainController.to.selectPageIndex = 3;
-          } else if (data.route == "/Categories") {
+          } else if (data.route == "/Customers") {
             MainController.to.selectPageIndex = 4;
-          } else if (data.route == "/Products") {
+          } else if (data.route == "/DeliveryBoys") {
             MainController.to.selectPageIndex = 5;
-          } else if (data.route == "/UploadBanners") {
+          } else if (data.route == "/Categories") {
             MainController.to.selectPageIndex = 6;
+          } else if (data.route == "/Products") {
+            MainController.to.selectPageIndex = 7;
+          } else if (data.route == "/UploadBanners") {
+            MainController.to.selectPageIndex = 8;
           } else {
             MainController.to.selectPageIndex = 0;
           }

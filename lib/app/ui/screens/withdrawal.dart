@@ -12,25 +12,28 @@ class Withdrawal extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            alignment: Alignment.topLeft,
-            padding: EdgeInsets.all(10.0),
-            child: CommonText(
-              text: "Manage Withdrawal",
-              fontSize: AppFontSize.eight,
-            ),
-          ),
-          Row(
-            children: [
-              buildExpanded(name: "Name", flex: 1),
-              buildExpanded(name: "Amount", flex: 3),
-              buildExpanded(name: "Bank Name", flex: 2),
-              buildExpanded(name: "Bank Account", flex: 2),
-              buildExpanded(name: "Email", flex: 1),
-              buildExpanded(name: "Phone", flex: 1),
-            ],
-          ),
+          Center(child: Text("Under Development"))
+          // Container(
+          //   alignment: Alignment.topLeft,
+          //   padding: EdgeInsets.all(10.0),
+          //   child: CommonText(
+          //     text: "Manage Withdrawal",
+          //     fontSize: AppFontSize.eight,
+          //   ),
+          // ),
+          // Row(
+          //   children: [
+          //     buildExpanded(name: "Name", flex: 1),
+          //     buildExpanded(name: "Amount", flex: 3),
+          //     buildExpanded(name: "Bank Name", flex: 2),
+          //     buildExpanded(name: "Bank Account", flex: 2),
+          //     buildExpanded(name: "Email", flex: 1),
+          //     buildExpanded(name: "Phone", flex: 1),
+          //   ],
+          // ),
+
         ],
       ),
     );

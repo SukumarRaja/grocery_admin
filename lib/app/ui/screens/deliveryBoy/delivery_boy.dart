@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../themes/colors.dart';
-import '../../widgets/vendors_card.dart';
 
-class Vendors extends StatelessWidget {
-  const Vendors({Key? key}) : super(key: key);
+import '../../themes/colors.dart';
+import '../../widgets/customrs_card.dart';
+import '../../widgets/deliveryboy_card.dart';
+
+class DeliveryBoys extends StatelessWidget {
+  const DeliveryBoys({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,11 @@ class Vendors extends StatelessWidget {
               SizedBox(
                 width: 30,
               ),
-              Text("Vendors",style: TextStyle(fontFamily: "Oswald",fontSize: Get.width*0.0150),),
+              Text(
+                "Delivery Mans",
+                style: TextStyle(
+                    fontFamily: "Oswald", fontSize: Get.width * 0.0150),
+              ),
               Spacer(),
               Container(
                 height: 50,
@@ -48,7 +54,8 @@ class Vendors extends StatelessWidget {
               GestureDetector(
                 onTap: () {},
                 child: Container(
-                  padding: EdgeInsets.only(left: 15,right: 15,top: 2,bottom: 2),
+                  padding:
+                      EdgeInsets.only(left: 15, right: 15, top: 2, bottom: 2),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6.0),
                       color: AppColors.primary),
@@ -64,7 +71,6 @@ class Vendors extends StatelessWidget {
               SizedBox(width: 20)
             ],
           ),
-
           SizedBox(height: 5),
           GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -75,7 +81,7 @@ class Vendors extends StatelessWidget {
               itemCount: 25,
               shrinkWrap: true,
               itemBuilder: (context, int index) {
-                return VendorCard(
+                return DeliveryBoyCard(
                   title: "Vendors",
                   titleCount: "50",
                   icon: Icons.group,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../themes/colors.dart';
-import '../../widgets/vendors_card.dart';
 
-class Vendors extends StatelessWidget {
-  const Vendors({Key? key}) : super(key: key);
+import '../../themes/colors.dart';
+import '../../widgets/customrs_card.dart';
+
+class Customers extends StatelessWidget {
+  const Customers({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,11 @@ class Vendors extends StatelessWidget {
               SizedBox(
                 width: 30,
               ),
-              Text("Vendors",style: TextStyle(fontFamily: "Oswald",fontSize: Get.width*0.0150),),
+              Text(
+                "Customers",
+                style: TextStyle(
+                    fontFamily: "Oswald", fontSize: Get.width * 0.0150),
+              ),
               Spacer(),
               Container(
                 height: 50,
@@ -75,7 +80,7 @@ class Vendors extends StatelessWidget {
               itemCount: 25,
               shrinkWrap: true,
               itemBuilder: (context, int index) {
-                return VendorCard(
+                return CustomerCard(
                   title: "Vendors",
                   titleCount: "50",
                   icon: Icons.group,
